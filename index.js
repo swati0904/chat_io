@@ -19,7 +19,7 @@ const server=http.createServer(app);
 const io=socketIO(server);
 
 io.on("connection",(socket)=>{
-    console.log("New Connection");
+    console.log("New Connect");
 
     socket.on('joined',({user})=>{
           users[socket.id]=user;
@@ -40,5 +40,5 @@ io.on("connection",(socket)=>{
 
 
 server.listen(port,()=>{
-    console.log(`Working`);
+    console.log("working ");
 })
